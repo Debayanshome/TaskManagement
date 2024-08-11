@@ -1,0 +1,15 @@
+C:\Projects\Test\TaskManagement\TaskManagement.Shared.Web\obj\Debug\net8.0\TaskManagement.Shared.Web.csproj.AssemblyReference.cache
+C:\Projects\Test\TaskManagement\TaskManagement.Shared.Web\obj\Debug\net8.0\TaskManagement.Shared.Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Test\TaskManagement\TaskManagement.Shared.Web\obj\Debug\net8.0\TaskManagement.Shared.Web.AssemblyInfoInputs.cache
+C:\Projects\Test\TaskManagement\TaskManagement.Shared.Web\obj\Debug\net8.0\TaskManagement.Shared.Web.AssemblyInfo.cs
+C:\Projects\Test\TaskManagement\TaskManagement.Shared.Web\obj\Debug\net8.0\TaskManagement.Shared.Web.csproj.CoreCompileInputs.cache
+C:\Projects\Test\TaskManagement\TaskManagement.Shared.Web\bin\Debug\net8.0\TaskManagement.Shared.Web.deps.json
+C:\Projects\Test\TaskManagement\TaskManagement.Shared.Web\bin\Debug\net8.0\TaskManagement.Shared.Web.dll
+C:\Projects\Test\TaskManagement\TaskManagement.Shared.Web\bin\Debug\net8.0\TaskManagement.Shared.Web.pdb
+C:\Projects\Test\TaskManagement\TaskManagement.Shared.Web\bin\Debug\net8.0\TaskManagement.Shared.Repository.dll
+C:\Projects\Test\TaskManagement\TaskManagement.Shared.Web\bin\Debug\net8.0\TaskManagement.Shared.Repository.pdb
+C:\Projects\Test\TaskManagement\TaskManagement.Shared.Web\obj\Debug\net8.0\TaskMana.1899845E.Up2Date
+C:\Projects\Test\TaskManagement\TaskManagement.Shared.Web\obj\Debug\net8.0\TaskManagement.Shared.Web.dll
+C:\Projects\Test\TaskManagement\TaskManagement.Shared.Web\obj\Debug\net8.0\refint\TaskManagement.Shared.Web.dll
+C:\Projects\Test\TaskManagement\TaskManagement.Shared.Web\obj\Debug\net8.0\TaskManagement.Shared.Web.pdb
+C:\Projects\Test\TaskManagement\TaskManagement.Shared.Web\obj\Debug\net8.0\ref\TaskManagement.Shared.Web.dll

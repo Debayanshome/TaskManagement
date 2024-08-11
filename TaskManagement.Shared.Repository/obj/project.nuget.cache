@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "4Rp1gk1u7eE=",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\Test\\TaskManagement\\TaskManagement.Shared.Repository\\TaskManagement.Shared.Repository.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Debayan Adtechcorp\\.nuget\\packages\\ardalis.specification\\8.0.0\\ardalis.specification.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
