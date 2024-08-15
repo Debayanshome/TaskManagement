@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
+using TaskManagement.Core.Task.Commands.Shared;
+using TaskManagement.Shared.Web.Results;
 
 namespace TaskManagement.Core.Task.Commands.Create
 {
-    public class CommandModel
+    public class CommandModel : TaskBaseCommandModel, IRequest<ValidationResult>
     {
 
     }

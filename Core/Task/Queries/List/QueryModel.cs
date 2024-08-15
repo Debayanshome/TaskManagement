@@ -6,6 +6,6 @@ namespace TaskManagement.Core.Task.Queries.List
 {
     public class QueryModel : PageQueryModel, IRequest<ValidationResult>
     {
-    
+        public string StatusFilter { get; set; }
     }
 }

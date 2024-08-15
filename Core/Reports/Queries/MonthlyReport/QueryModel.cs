@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
+using TaskManagement.Shared.Web.Results;
 
 namespace TaskManagement.Core.Reports.Queries.MonthlyReport
 {
-    public class QueryModel
+    public class QueryModel : IRequest<ValidationResult>
     {
+        public int TaskId { get; set; }
     }
 }

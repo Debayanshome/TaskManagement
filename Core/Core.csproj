@@ -8,11 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="FluentValidation" Version="11.9.2" />
     <PackageReference Include="MediatR" Version="12.4.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Repository\Repository.csproj" />
     <ProjectReference Include="..\TaskManagement.Shared.Repository\TaskManagement.Shared.Repository.csproj" />
     <ProjectReference Include="..\TaskManagement.Shared.Web\TaskManagement.Shared.Web.csproj" />
   </ItemGroup>

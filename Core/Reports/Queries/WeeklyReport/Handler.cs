@@ -1,27 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AutoMapper;
+using MediatR;
+using Microsoft.Extensions.Logging;
+using TaskManagement.Core.Common;
+using TaskManagement.Repository.Specifications.Task;
+using TaskManagement.Shared.Repository.Interface;
+using TaskManagement.Shared.Web.Results;
 
 namespace TaskManagement.Core.Reports.Queries.WeeklyReport
 {
-    public class Handler
+    public class Handler : IRequestHandler<QueryModel, ValidationResult>
     {
-      /*  var startOfWeek = DateTime.UtcNow.StartOfWeek(DayOfWeek.Monday);
-        var endOfWeek = startOfWeek.AddDays(7);
+        private readonly IReadRepository<Repository.Models.TaskDetail> _taskDetailReadRepository;
+        private readonly IMapper _mapper;
+        private readonly ILogger _logger;
 
-        var tasks = await _context.Tasks
-            .Where(t => t.DueDate >= startOfWeek && t.DueDate < endOfWeek)
-            .ToListAsync();
+        public Handler(IReadRepository<Repository.Models.TaskDetail> taskDetailReadRepository, IMapper mapper, ILogger<Handler> logger)
+        {
+            this._taskDetailReadRepository = taskDetailReadRepository;
+            this._mapper = mapper;
+            this._logger = logger;
+        }
 
-        var report = tasks.GroupBy(t => t.EmployeeId)
-                          .Select(g => new
-                          {
-                              EmployeeId = g.Key,
-                              CompletedTasks = g.Count(t => t.IsCompleted),
-                              TotalTasks = g.Count()
-                          });*/
+        public async Task<ValidationResult> Handle(QueryModel request, CancellationToken cancellationToken)
+        {
+            _logger.LogInformation("Fetching Report Data");
 
+            var startOfWeek = DateTime.UtcNow.StartOfWeek(DayOfWeek.Monday);
+            var endOfWeek = startOfWeek.AddDays(7);
+           var taskDetail = await this._taskDetailReadRepository.ListAsync(new TaskFetchSpecification(request.TaskId, startOfWeek, endOfWeek), cancellationToken);          
+
+            var report = taskDetail.GroupBy(t => t.EmployeeId)
+                              .Select(g => new
+                              {
+                                  EmployeeName = taskDetail.Select(r => r.Employee).FirstOrDefault(c => c.Id == g.Key).Name,
+                                  CompletedTasks = g.Count(t => t.Status.ToLower() == Repository.Common.Enum.TaskStatusType.Completed.ToString().ToLower()),
+                                  TotalTasks = g.Count(),
+                                  TotalHoursSpent = g.Sum(t => t.TotalHoursSpent)
+                              }).ToList();
+            _logger.LogInformation("Successfully fetched report data");
+            return new ValidObjectResult(report);
+        }
     }
 }

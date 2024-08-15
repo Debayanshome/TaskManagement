@@ -1,11 +1,10 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using TaskManagement.Core.Common;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace TaskManagement.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class ReportsController : ControllerBase
     {
@@ -18,16 +17,26 @@ namespace TaskManagement.Api.Controllers
             _logger = logger;
             _mediator = mediator;
         }
-        [HttpGet("weekly")]
+        [HttpGet("Weekly")]
         public async Task<IActionResult> GetWeeklyReport([FromQuery] TaskManagement.Core.Reports.Queries.WeeklyReport.QueryModel query)
         {
             return new ObjectResult(await _mediator.Send(query));
         }
        
-        [HttpGet("monthly")]
+        [HttpGet("Monthly")]
         public async Task<IActionResult> GetMonthlyReport([FromQuery] TaskManagement.Core.Reports.Queries.MonthlyReport.QueryModel query)
         {
             return new ObjectResult(await _mediator.Send(query));
+        } 
+        [HttpGet("Entire")]
+        public async Task<IActionResult> GetEntireReport([FromQuery] TaskManagement.Core.Reports.Queries.EntireReport.QueryModel query)
+        {
+            return new ObjectResult(await _mediator.Send(query));
+        }
+        [HttpGet("ByEmployeeId/{empId}")]
+        public async Task<IActionResult> GetEntireReport(int empId)
+        {
+            return new ObjectResult(await _mediator.Send(new TaskManagement.Core.Reports.Queries.ByEmployeeId.QueryModel { EmployeeId = empId}));
         }
     }
 }

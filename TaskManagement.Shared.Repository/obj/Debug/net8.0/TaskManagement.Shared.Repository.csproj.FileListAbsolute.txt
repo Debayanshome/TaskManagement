@@ -1,6 +1,7 @@
 C:\Projects\Test\TaskManagement\TaskManagement.Shared.Repository\bin\Debug\net8.0\TaskManagement.Shared.Repository.deps.json
 C:\Projects\Test\TaskManagement\TaskManagement.Shared.Repository\bin\Debug\net8.0\TaskManagement.Shared.Repository.dll
 C:\Projects\Test\TaskManagement\TaskManagement.Shared.Repository\bin\Debug\net8.0\TaskManagement.Shared.Repository.pdb
+C:\Projects\Test\TaskManagement\TaskManagement.Shared.Repository\obj\Debug\net8.0\TaskManagement.Shared.Repository.csproj.AssemblyReference.cache
 C:\Projects\Test\TaskManagement\TaskManagement.Shared.Repository\obj\Debug\net8.0\TaskManagement.Shared.Repository.GeneratedMSBuildEditorConfig.editorconfig
 C:\Projects\Test\TaskManagement\TaskManagement.Shared.Repository\obj\Debug\net8.0\TaskManagement.Shared.Repository.AssemblyInfoInputs.cache
 C:\Projects\Test\TaskManagement\TaskManagement.Shared.Repository\obj\Debug\net8.0\TaskManagement.Shared.Repository.AssemblyInfo.cs
@@ -9,4 +10,3 @@ C:\Projects\Test\TaskManagement\TaskManagement.Shared.Repository\obj\Debug\net8.
 C:\Projects\Test\TaskManagement\TaskManagement.Shared.Repository\obj\Debug\net8.0\refint\TaskManagement.Shared.Repository.dll
 C:\Projects\Test\TaskManagement\TaskManagement.Shared.Repository\obj\Debug\net8.0\TaskManagement.Shared.Repository.pdb
 C:\Projects\Test\TaskManagement\TaskManagement.Shared.Repository\obj\Debug\net8.0\ref\TaskManagement.Shared.Repository.dll
-C:\Projects\Test\TaskManagement\TaskManagement.Shared.Repository\obj\Debug\net8.0\TaskManagement.Shared.Repository.csproj.AssemblyReference.cache

@@ -43,6 +43,13 @@ namespace TaskManagement.Api.Controllers
         {
             return new ObjectResult(await _mediator.Send(command));
         }
+        
+        [ProducesResponseType(typeof(TaskManagement.Core.Task.Shared.TaskResponseModel), 200)]
+        [HttpPost("Status")]
+        public async Task<IActionResult> PostStatusAsync([FromBody] TaskManagement.Core.Task.Commands.Status.CommandModel command)
+        {
+            return new ObjectResult(await _mediator.Send(command));
+        }
 
         #endregion
 
